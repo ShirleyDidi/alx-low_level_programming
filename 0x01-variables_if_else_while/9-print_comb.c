@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
 * main - main block
-* Description: prints all single number of base 10
+* Description: prints all single number of base 10 add a new line
 * starting from 0, followed by new line
 * Return: 0
 */
@@ -19,5 +19,6 @@ putchar(' ');
 }
 c++;
 }
+putchar('\n');
 return (0);
 }
