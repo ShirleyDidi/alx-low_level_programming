@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* more numbers - Prints 10 times the number since 0 up to 14
+* more_numbers - Prints 10 times the number since 0 up to 14
 * Description: prints more numbers
 * Return: 10 times of the numbers since 0 up to 14
 */
