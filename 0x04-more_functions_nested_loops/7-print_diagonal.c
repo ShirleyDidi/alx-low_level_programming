@@ -1,9 +1,11 @@
 #include "main.h"
 /**
-* print_diagonally - Draws a diagonally lines according parameter
+* print_diagonally - Draws diagonally lines according parameter
 * @n: The number of times to print diagonal lines
+* Description: draws diagonal lines
 * Return: empty
 */
+
 void print_diagonal(int n)
 {
 int x, y;
