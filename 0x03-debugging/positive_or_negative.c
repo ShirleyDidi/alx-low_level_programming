@@ -4,7 +4,7 @@
 * @i: number to be checked
 * Return: nothing on Success
 */
-void positive_ornegative(int i)
+void positive_or_negative(int i)
 {
 if (i > 0)
 printf("%d is positive\n", i);
