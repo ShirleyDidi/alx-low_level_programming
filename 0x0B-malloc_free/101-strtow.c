@@ -1,33 +1,78 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+int word_len(char *str);
+int count_words(char *str);
+char **strtow(char *str);
 /**
-* print_tab - prints an array of string
-* @tab: the array to print
-* Return: nothing
+* word_len - locates the index marking the end of the first word
+* @str: the string to be searched
+* Return: the index marking 
 */
-void print_tab(char **tab)
+int word_len(char *str)
 {
-int i;
-for ( i = 0; tab[i] != NULL; ++i)
+int index = 0, len = 0;
+ while (*(str + index) && *(str + index) != ' ')
 {
-printf("%s\n", tab[i]);
+len++;
+index++;
 }
+return (len);
 }
 
 /**
-* main - check the code for ALX School Students
-* Return: 1 if an error occured, 0 otherwise
+* count_words - counts the number of words contained within a string
+* @str: the string to be searched
+* Return: the number of words contained within str
 */
-int main(void)
+int count_words(char *str)
 {
-char **tab;
-tab = strtow("     ALX School         #cisfun       ");
-if (tab == NULL)
+int index = 0, words = 0, len = 0;
+for (index = 0; *(str + index); index++)
+len++;
+for (index = 0; index < len; index++)
 {
-printf("failed\n");
-return (1);
+if (*(str + index) != ' ')
+{
+words++;
+index += word_len(str + index);
 }
-print_tab(tab);
-return (0);
+}
+return (words);
+}
+
+/**
+* strtow - splits a string into words
+* @str: the string to be split
+* Return: NULL if str == NULL or str == ""
+*/
+char **strtow(char *str)
+{
+char **strings;
+int index = 0, words, w, letters, l;
+if (str == NULL || str[0] == '\0')
+return (NULL);
+words = count_words(str);
+if (words == 0)
+return (NULL);
+strings = malloc(sizeof(char *) * (words + 1));
+if (strings == NULL)
+return (NULL);
+for (w = 0; w < words; w++)
+{
+while (str[index] == ' ')
+index++;
+letters = word_len(str + index);
+strings[w] = malloc(sizeof(char) * (letters + 1));
+if (strings[w] == NULL)
+{
+for (; w >= 0; w--)
+free(strings);
+return (NULL);
+}
+for (l = 0; l < letters; l++)
+strings[w][l] = str[index++];
+strings[w][l] = '\0';
+}
+strings[w] = NULL;
+return (strings);
 }
