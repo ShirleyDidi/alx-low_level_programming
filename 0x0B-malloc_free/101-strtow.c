@@ -6,12 +6,12 @@ char **strtow(char *str);
 /**
 * word_len - locates the index marking the end of the first word
 * @str: the string to be searched
-* Return: the index marking 
+* Return: the index marking
 */
 int word_len(char *str)
 {
 int index = 0, len = 0;
- while (*(str + index) && *(str + index) != ' ')
+while (*(str + index) && *(str + index) != ' ')
 {
 len++;
 index++;
