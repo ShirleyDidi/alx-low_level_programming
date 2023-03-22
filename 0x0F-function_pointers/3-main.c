@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-* main - main function
+* main - use atoi to convert arguments to int
 * @argc: arguments
-* @argv: 
-* Return: 
+* @argv: arguments
+* Return: nothing
 */
 int main(int argc, char *argv[])
 {

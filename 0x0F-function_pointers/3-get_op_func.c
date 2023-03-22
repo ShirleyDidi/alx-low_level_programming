@@ -4,7 +4,7 @@
 /**
 * get_op_func - correct function to perform the operation asked by the user
 * @s: s the operator passed as argument to the program
-* Return: should return a pointer to the function 
+* Return: should return a pointer to the function
 */
 int (*get_op_func(char *s))(int, int)
 {
