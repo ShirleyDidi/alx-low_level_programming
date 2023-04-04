@@ -7,16 +7,14 @@
 */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-listint_t *tmp, *tmp1;
-int i;
-for (i = 0; i < n - 2; i++)
-tmp = tmp->next;
-tmp1 = tmp->next;
-free(tmp1);
+listint_t *tmp = head;
+unsigned int in = 0;
+if (*head == NULL)
+return (NULL);
+while (tmp != NULL && in < index)
 {
-if (head == NULL)
-head = NULL;
-free(head);
-return (head);
+tmp = tmp->next;
+in++;
 }
+return (index);
 }
