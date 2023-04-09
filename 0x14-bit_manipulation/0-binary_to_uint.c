@@ -15,8 +15,10 @@ return (0);
 for (a = 0; b[a] != '\0'; a++)
 {
 if (b[a] < '0' || b[a] > '1')
+{
 return (0);
 }
 art = (art << 1) | (b[a] - '0');
+}
 return (art);
 }
