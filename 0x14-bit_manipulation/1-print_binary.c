@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 /**
 * print_binary - prints the binary representation of a number
 * @n: number to print
@@ -7,18 +7,18 @@
 */
 void print_binary(unsigned long int n)
 {
-unsigned long int hop;
-hop = 1UL << (sizeof(unsigned long int));
-while (mask > 0)
+unsigned long int cuse;
+int a;
+if (n & (1 << a))
+_putchar('1');
 {
-if (n & hop)
-{
-putchar('1');
-}
 else
 {
-putchar('0');
+_putchar('0');
+for (a = 63; a >= 0; a--)
+{
+cuse = n >> a;
 }
-hop >>= 1;
-}
+if (!cuse)
+_putchar('0');
 }
