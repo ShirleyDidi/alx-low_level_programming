@@ -8,17 +8,18 @@
 void print_binary(unsigned long int n)
 {
 unsigned long int cuse;
-int a;
-if (n & (1 << a))
-_putchar('1');
-{
-else
-{
-_putchar('0');
+int a, vux = 0;
 for (a = 63; a >= 0; a--)
 {
 cuse = n >> a;
+if (cuse & 1)
+{
+_putchar('1');
+vux++;
 }
-if (!cuse)
+else if (vux)
+_putchar('0');
+}
+if (!vux)
 _putchar('0');
 }
