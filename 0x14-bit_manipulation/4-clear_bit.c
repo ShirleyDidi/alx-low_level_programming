@@ -12,7 +12,7 @@ if (index >= sizeof(unsigned long int) * 8)
 {
 return (0);
 }
-cast = ~(1UL << index);
+cast = ~(n << index);
 *n &= cast;
 return (1);
 }

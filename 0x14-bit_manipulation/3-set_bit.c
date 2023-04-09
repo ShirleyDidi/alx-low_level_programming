@@ -9,9 +9,10 @@
 */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-unsigned long int g;
+unsigned long int g = 0;
 if (index >= sizeof(unsigned long int) * CHAR_BIT)
 return (-1);
-g |= (n << index) & 1;
+g = 1UL << index;
+*n |= g;
 return (1);
 }
