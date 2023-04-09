@@ -9,9 +9,9 @@
 */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-int jax;
+int pax;
 if (index >= sizeof(unsigned long int) * CHAR_BIT)
 return (-1);
-jax = (n << index);
+pax = (n << index);
 return (1);
 }
