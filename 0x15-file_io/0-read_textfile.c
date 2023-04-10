@@ -19,7 +19,7 @@ return (0);
 buffer = malloc(sizeof(char) * letters);
 g = read(fh, buffer, letters);
 m = write(STDOUT_FILENO, buffer, g);
-close (fh);
+close(fh);
 free(buffer);
 return (m);
 }
