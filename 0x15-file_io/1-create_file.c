@@ -1,5 +1,7 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
 * create_file - creates a file
 * @filename: file name
@@ -12,7 +14,9 @@ int dg;
 size_t len;
 ssize_t bytes_written;
 if (filename == NULL)
+{
 return (-1);
+}
 dg = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 if (dg == -1)
 return (-1);
